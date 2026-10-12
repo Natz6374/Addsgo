@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Listing image unavailable</title>
+  <desc id="desc">A simple illustration indicating that this listing has no photo available.</desc>
+  <rect width="800" height="600" fill="#eef3f8"/>
+  <rect x="270" y="170" width="260" height="200" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="8"/>
+  <circle cx="350" cy="235" r="22" fill="#93c5fd"/>
+  <path d="M295 335l75-72 50 46 37-35 48 61H295z" fill="#60a5fa"/>
+  <text x="400" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#475569">Photo unavailable</text>
+</svg>

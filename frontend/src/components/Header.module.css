@@ -1,0 +1,235 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px; /* Balanced height */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #0f172a; /* Slate black logo font */
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.logoDot {
+  color: var(--primary); /* Logo dot is blue */
+}
+
+.locationSelect {
+  padding: 4px 8px;
+  border: none;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  color: var(--text-dark);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.iconLink:hover {
+  color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+.iconSvg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.userProfile:hover {
+  background-color: var(--primary-light);
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.profileName {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999; /* Draw on top of sub-navbar and hero sections */
+}
+
+.userProfile:hover .dropdown {
+  display: flex;
+}
+
+.dropdownItem {
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--text-dark);
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdownItem:hover {
+  background-color: var(--bg-main);
+  color: var(--primary);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 4px 0;
+}
+
+.postAdBtn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 18px; /* Compact padding */
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 75, 191, 0.15);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.postAdBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Sub-Navbar styling */
+.subNavbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.subNavbarContent {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center; /* Centered links */
+  gap: 30px; /* Generous gap */
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.subNavbarContent::-webkit-scrollbar {
+  display: none;
+}
+
+.subLink {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b; /* Dark text for sublinks */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  position: relative;
+  padding: 4px 0;
+}
+
+.subLink:hover {
+  color: var(--primary);
+}
+
+.newBadge {
+  background-color: var(--primary); /* Blue badge instead of red */
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 900;
+  padding: 1px 5px;
+  border-radius: 10px;
+  margin-left: 2px;
+  text-transform: uppercase;
+}

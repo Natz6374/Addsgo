@@ -1,0 +1,15 @@
+{
+  "name": "addsgo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Addsgo classifieds app - frontend and API runner",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm --prefix ./backend run dev",
+    "dev:frontend": "npm --prefix ./frontend run dev",
+    "dev": "concurrently -k -n API,WEB \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

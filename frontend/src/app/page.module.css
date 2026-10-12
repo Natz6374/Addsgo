@@ -1,0 +1,379 @@
+.mainContainer {
+  background-color: var(--bg-main);
+}
+
+.hero {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(0, 75, 191, 0.55)),
+                    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.heroTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Console Card Container */
+.searchConsole {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tabs for Toggle Filtering */
+.searchTabsRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.searchTabsRow::-webkit-scrollbar {
+  display: none;
+}
+
+.searchingInLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+
+.searchTab {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.searchTab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.activeSearchTab {
+  background-color: var(--primary) !important; /* Selected tab is blue */
+  color: white !important;
+}
+
+/* Search Input Bar */
+.searchContainer {
+  background: white;
+  padding: 4px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 600px) {
+  .searchContainer {
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+  }
+}
+
+.inputWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  padding: 8px 36px 8px 12px; /* Space for search glass icon */
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.searchGlassIcon {
+  position: absolute;
+  right: 12px;
+  color: #94a3b8;
+  width: 18px;
+  height: 18px;
+}
+
+.searchButton {
+  background-color: var(--primary); /* Blue search button */
+  color: white;
+  border: none;
+  padding: 0 40px;
+  height: 40px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.searchButton:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Categories Section */
+.categoriesSection {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.categoriesTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}
+
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: white;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.categoryCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 75, 191, 0.15);
+}
+
+.categoryIcon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.categoryName {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* Promo Banners Grid */
+.promoSection {
+  padding: 10px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wideBanner {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .wideBanner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bannerImage {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.bannerText h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.bannerText p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.bannerBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bannerBtnOutline {
+  background-color: white;
+  color: var(--text-dark);
+  border: 1.5px solid var(--border-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bannerBtnOutline:hover {
+  background-color: var(--bg-main);
+}
+
+/* Peach color Sell/Rent banner background */
+.sellRentBanner {
+  background: linear-gradient(90deg, #fef2f2 0%, #fff7ed 100%);
+  border: 1px solid #ffedd5;
+}
+
+.gridPromo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .gridPromo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.promoCard {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  height: 140px;
+  box-shadow: var(--shadow-sm);
+}
+
+.promoCardContent {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promoCardContent h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.promoCardContent p {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.promoCardBtn {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: none;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.promoCardBtn:hover {
+  background-color: rgba(0, 75, 191, 0.12);
+}
+
+.promoCardImage {
+  width: 140px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Listings Header Title minimal margins */
+.listingsSection {
+  padding: 20px 0 60px 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.viewAllLink {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.listingsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  gap: 16px;
+}
